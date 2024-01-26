@@ -28,10 +28,10 @@ const Footer = () => {
 
           {/* Navigation Links */}
           <div className="flex flex-col mb-4">
-            <a href="#" className="text-white text-xl font-semibold mb-2 ml-8">Home</a>
-            <a href="#" className="text-white text-xl font-semibold mb-2 ml-8">Events</a>
-            <a href="#" className="text-white text-xl font-semibold mb-2 ml-8">Team</a>
-            <a href="#" className="text-white text-xl font-semibold ml-8">Contact Us</a>
+            <a href="#" className="text-white hover:text-red text-xl font-semibold mb-2 ml-8">Home</a>
+            <a href="#" className="text-white hover:text-blue text-xl font-semibold mb-2 ml-8">Events</a>
+            <a href="#" className="text-white hover:text-yellow text-xl font-semibold mb-2 ml-8">Team</a>
+            <a href="#" className="text-white hover:text-green text-xl font-semibold ml-8">Contact Us</a>
           </div>
 
           {/* Email Subscription Form */}
@@ -66,19 +66,22 @@ const Footer = () => {
             {/* Phone Icon and Number */}
             <div className="flex items-center mb-4 ml-4">
               <img src={Phone} alt="Twitter" style={{ width: '30px', height: '30px' }} />
-              <p className="text-white text-xl ml-4">+91 8810565359</p>
+              <p className="text-white hover:text-blue text-xl ml-4">+91 8810565359</p>
             </div>
 
             {/* Email Icon and Address */}
             <div className="flex items-center mb-4 ml-4">
-              <img src={Email} alt="Twitter" style={{ width: '30px', height: '20px' }} />
-              <p className="text-white text-xl ml-4">gdsc.mscw@du.ac.in</p>
-            </div>
+             <img src={Email} alt="Email" style={{ width: '30px', height: '20px' }} />
+             <a href="mailto:gdsc.mscw@du.ac.in">
+             <p className="text-white hover:text-blue text-xl ml-4">gdsc.mscw@du.ac.in</p>
+             </a>
+             </div>
+
 
             {/* Location Icon and Address */}
             <div className="flex items-center ml-4">
               <img src={Location} alt="Twitter" style={{ width: '30px', height: '30px' }} />
-              <p className="text-white text-xl ml-4">
+              <p className="text-white hover:text-blue text-xl ml-4">
                 Mata Sundari Ln, Mata Sundri Women's College, Mandi House, New Delhi, Delhi 110002
               </p>
             </div>
