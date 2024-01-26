@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import logo from '../assets/gdsc logo.ico';
 import sun from "../assets/sun.svg";
 import moon from "../assets/moon.svg";
@@ -57,34 +58,34 @@ const Navbar = () => {
 
 
       {/* Mobile Navigation Sidebar */}
-      <div className={`fixed top-0 left-0 h-full w-1/2 shadow-md bg-white ${isMobileNavOpen ? 'block' : 'hidden'}`}>
-        <div className="flex justify-end p-4">
-          <button
-            onClick={closeMobileNav}
-            className={`text-gray-68 focus:outline-none ${theme === 'dark' ? 'text-white' : 'text-gray-68'}`}
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
-            </svg>
-          </button>
-        </div>
+<div className={`fixed top-0 left-0 h-full w-1/2 shadow-md bg-white ${isMobileNavOpen ? 'block' : 'hidden'}`}>
+  <div className="flex justify-end p-4">
+    <button
+      onClick={closeMobileNav}
+      className={`text-gray-68 focus:outline-none ${theme === 'dark' ? 'text-white' : 'text-gray-68'}`}
+    >
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+    </button>
+  </div>
 
         {/* Mobile Navigation Menu */}
-        <div className="flex flex-col p-4">
-          <a href="#" className="py-2" onClick={closeMobileNav}>Home</a>
-          <a href="#" className="py-2" onClick={closeMobileNav}>Events</a>
-          <a href="#" className="py-2" onClick={closeMobileNav}>Team</a>
-          <a href="#" className="py-2" onClick={closeMobileNav}>Contact Us</a>
-        </div>
-      </div>
+  <div className="flex flex-col p-4">
+    <Link to="/" className="py-2" onClick={closeMobileNav}>Home</Link>
+    <Link to="/events" className="py-2" onClick={closeMobileNav}>Events</Link>
+    <Link to="/team" className="py-2" onClick={closeMobileNav}>Team</Link>
+    <Link to="/contact" className="py-2" onClick={closeMobileNav}>Contact Us</Link>
+  </div>
+</div>
 
         {/* Right Side - Navigation Sections (Not visible in mobile view) */}
-        <div className="flex items-center  text-2xl lg:flex hidden">
-        <a className={`mr-5 ${theme === 'dark' ? 'text-white' : 'text-gray-68'} hover:text-red hover:border-b-4 hover:border-red transition duration-300 ease-in-out`}>Home</a>
-        <a className={`mr-5 ${theme === 'dark' ? 'text-white' : 'text-gray-68'} hover:text-blue hover:border-b-4 hover:border-blue transition duration-300 ease-in-out`}>Events</a>
-        <a className={`mr-5 ${theme === 'dark' ? 'text-white' : 'text-gray-68'} hover:text-yellow hover:border-b-4 hover:border-yellow transition duration-300 ease-in-out`}>Team</a>
-        <a className={`mr-5 ${theme === 'dark' ? 'text-white' : 'text-gray-68'} hover:text-green hover:border-b-4 hover:border-green transition duration-300 ease-in-out`}>Contact Us</a>
-        </div>
+      <div className="flex items-center  text-2xl lg:flex hidden">
+        <Link to="/" className={`mr-5 ${theme === 'dark' ? 'text-white' : 'text-gray-68'} hover:text-red hover:border-b-4 hover:border-red transition duration-300 ease-in-out`}>Home</Link>
+        <Link to="/events" className={`mr-5 ${theme === 'dark' ? 'text-white' : 'text-gray-68'} hover:text-blue hover:border-b-4 hover:border-blue transition duration-300 ease-in-out`}>Events</Link>
+        <Link to="/team" className={`mr-5 ${theme === 'dark' ? 'text-white' : 'text-gray-68'} hover:text-yellow hover:border-b-4 hover:border-yellow transition duration-300 ease-in-out`}>Team</Link>
+        <Link to="/contact" className={`mr-5 ${theme === 'dark' ? 'text-white' : 'text-gray-68'} hover:text-green hover:border-b-4 hover:border-green transition duration-300 ease-in-out`}>Contact Us</Link>
+      </div>
 
       {/* Light/Dark Toggle Button - Always visible */}
       <div className="flex items-center  text-2xl">
