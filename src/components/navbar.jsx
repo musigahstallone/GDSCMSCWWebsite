@@ -58,11 +58,10 @@ const Navbar = () => {
 
 
       {/* Mobile Navigation Sidebar */}
-<div className={`fixed top-0 left-0 h-full w-1/2 shadow-md bg-white ${isMobileNavOpen ? 'block' : 'hidden'}`}>
-  <div className="flex justify-end p-4">
+      <div className={`fixed top-0 left-0 h-full w-1/2 shadow-md bg-${theme === 'dark' ? 'black' : 'white'} bg-opacity-80 z-50 ${isMobileNavOpen ? 'block' : 'hidden'}`}>  <div className="flex justify-end p-4">
     <button
       onClick={closeMobileNav}
-      className={`text-gray-68 focus:outline-none ${theme === 'dark' ? 'text-white' : 'text-gray-68'}`}
+      className={`text-black text-bold focus:outline-none ${theme === 'dark' ? 'text-white' : 'text-gray-800'}`}
     >
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
@@ -87,7 +86,7 @@ const Navbar = () => {
         <Link to="/contact" className={`mr-5 ${theme === 'dark' ? 'text-white' : 'text-gray-68'} hover:text-green hover:border-b-4 hover:border-green transition duration-300 ease-in-out`}>Contact Us</Link>
       </div>
 
-      {/* Light/Dark Toggle Button - Always visible */}
+      {/* Light/Dark Toggle Button*/}
       <div className="flex items-center  text-2xl">
         <button className="btn btn-square btn-ghost">
           <label className="swap swap-rotate w-12 h-12">

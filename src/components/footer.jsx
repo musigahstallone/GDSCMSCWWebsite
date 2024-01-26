@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import logo from '../assets/gdsc logo.ico';
 import Instagram from '../assets/instagram.png';
 import Youtube from '../assets/youtube.png';
@@ -28,10 +29,10 @@ const Footer = () => {
 
           {/* Navigation Links */}
           <div className="flex flex-col mb-4">
-            <a href="#" className="text-white hover:text-red text-xl font-semibold mb-2 ml-8">Home</a>
-            <a href="#" className="text-white hover:text-blue text-xl font-semibold mb-2 ml-8">Events</a>
-            <a href="#" className="text-white hover:text-yellow text-xl font-semibold mb-2 ml-8">Team</a>
-            <a href="#" className="text-white hover:text-green text-xl font-semibold ml-8">Contact Us</a>
+            <Link to="/" className="text-white hover:text-red text-xl font-semibold mb-2 ml-8">Home</Link>
+            <Link to="/events" className="text-white hover:text-blue text-xl font-semibold mb-2 ml-8">Events</Link>
+            <Link to="/team" className="text-white hover:text-yellow text-xl font-semibold mb-2 ml-8">Team</Link>
+            <Link to="/contact" className="text-white hover:text-green text-xl font-semibold ml-8">Contact Us</Link>
           </div>
 
           {/* Email Subscription Form */}
@@ -55,11 +56,23 @@ const Footer = () => {
         <div className="lg:w-1/2">
           {/* Social Media Icons */}
           <div className="flex mb-8 mt-6 ml-8">
-            <img src={Youtube} alt="YouTube" className="mr-4" style={{ width: '30px', height: '30px' }} />
-            <img src={Instagram} alt="Instagram" className="mr-4" style={{ width: '30px', height: '30px' }} />
-            <img src={Linkedin} alt="LinkedIn" className="mr-4" style={{ width: '30px', height: '30px' }} />
-            <img src={Twitter} alt="Twitter" style={{ width: '30px', height: '30px' }} />
+            <a href="https://www.youtube.com/@GDSC-MSCW" target="_blank" rel="noopener noreferrer">
+              <img src={Youtube} alt="YouTube" className="mr-4" style={{ width: '30px', height: '30px' }} />
+            </a>
+  
+            <a href="https://www.instagram.com/gdsc_mscw/" target="_blank" rel="noopener noreferrer">
+              <img src={Instagram} alt="Instagram" className="mr-4" style={{ width: '30px', height: '30px' }} />
+            </a>
+  
+            <a href="https://www.linkedin.com/company/google-developer-student-clubs-mata-sundri-college-for-women/mycompany/" target="_blank" rel="noopener noreferrer">
+             <img src={Linkedin} alt="LinkedIn" className="mr-4" style={{ width: '30px', height: '30px' }} />
+            </a>
+  
+            <a href="https://twitter.com/GDSC_MSCW" target="_blank" rel="noopener noreferrer">
+             <img src={Twitter} alt="Twitter" style={{ width: '30px', height: '30px' }} />
+            </a>
           </div>
+
 
           {/* Contact Information */}
           <div className="flex flex-col mb-4 ">
@@ -80,13 +93,24 @@ const Footer = () => {
 
             {/* Location Icon and Address */}
             <div className="flex items-center ml-4">
-              <img src={Location} alt="Twitter" style={{ width: '30px', height: '30px' }} />
-              <p className="text-white hover:text-blue text-xl ml-4">
-                Mata Sundari Ln, Mata Sundri Women's College, Mandi House, New Delhi, Delhi 110002
-              </p>
-            </div>
+             <img src={Location} alt="Twitter" style={{ width: '30px', height: '30px' }} />
+               <a
+                 href="https://www.google.com/maps/place/Mata+Sundri+College+for+Women(University+Of+Delhi)/@28.6335639,77.2315474,17z/data=!3m1!4b1!4m6!3m5!1s0x390cfd2ed90f27c3:0x1ae96f860fc49d6e!8m2!3d28.6335639!4d77.2341223!16s%2Fm%2F0cpdwg1?hl=en&entry=ttu"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 className="text-white hover:text-blue text-xl ml-4"
+               >
+               Mata Sundari Ln, Mata Sundri Women's College, Mandi House, New Delhi, Delhi 110002
+               </a>
+             </div>            
           </div>
         </div>
+      </div>
+      {/* Copyright Line */}
+      <div className="text-center font-bold mt-4 absolute bottom-0 left-0 right-0">
+        <p className="text-white text-sm bg-gray-400 p-2">
+          Copyright © 2023. All Rights Reserved
+        </p>
       </div>
     </footer>
   );
