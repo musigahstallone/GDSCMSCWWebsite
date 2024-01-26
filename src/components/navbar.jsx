@@ -58,7 +58,7 @@ const Navbar = () => {
 
 
       {/* Mobile Navigation Sidebar */}
-      <div className={`fixed top-0 left-0 h-full w-1/2 shadow-md bg-${theme === 'dark' ? 'black' : 'white'} bg-opacity-80 z-50 ${isMobileNavOpen ? 'block' : 'hidden'}`}>  <div className="flex justify-end p-4">
+      <div className={`fixed top-0 left-0 h-full w-1/2 shadow-md bg-${theme === 'dark' ? 'black' : 'white'} bg-opacity-90 z-50 ${isMobileNavOpen ? 'block' : 'hidden'}`}>  <div className="flex justify-end p-4">
     <button
       onClick={closeMobileNav}
       className={`text-black text-bold focus:outline-none ${theme === 'dark' ? 'text-white' : 'text-gray-800'}`}
