@@ -52,7 +52,7 @@ const Navbar = () => {
         <img src={logo} alt="Google Developers Student Club" className="mr-2" />
         <div>
           <p className={`font-semibold md:text-xl lg:text-2xl text-sm ${theme === 'dark' ? 'text-white' : 'text-gray-68'}`}>Google Developers Student Club</p>
-          <p className={`${theme === 'dark' ? 'text-white' : 'text-gray-68'} text-xs`}>Mata Sundri College for Women</p>
+          <p className={`${theme === 'dark' ? 'text-white' : 'text-gray-68'} font-bold text-xs`}>Mata Sundri College for Women</p>
         </div>
       </div>
 
