@@ -5,7 +5,7 @@ import heroImage from '../assets/heroimg.gif';
 const Home = () => {
   return (
     <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 gap-8">
-      <div className="mb-4 sm:mb-0 ml-10 md:ml-0 mr-10 md:mr-0">
+      <div className="mb-4 sm:mb-0 ml-10 md:ml-2 mr-10 md:mr-2">
         <h1 className="text-2xl md:text-3xl text-gray-800 font-bold mt-10 md:mt-20">
           Welcome to <span className="text-red">G</span>
           <span className="text-blue">D</span>
