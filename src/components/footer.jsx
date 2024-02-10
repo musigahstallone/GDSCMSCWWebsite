@@ -12,10 +12,10 @@ import Location from '../assets/location.png';
 
 const Footer = () => {
   return (
-    <footer className="bg-black p-8 text-white fixed bottom-0 w-full">
-      <div className="lg:flex">
+    <footer className="bg-black p-0 text-white bottom-0 w-full justify-around">
+      <div className="lg:flex p-8">
         {/* First Column: Logo to Subscribe Button */}
-        <div className="lg:w-1/2 mb-4">
+        <div className="lg:w-1/2">
           <div className="flex items-center mb-4">
             {/* Google Developer Student Clubs Logo */}
             <img src={logo} alt="GDSC Logo" className="mr-2" />
@@ -36,15 +36,15 @@ const Footer = () => {
           </div>
 
           {/* Email Subscription Form */}
-          <div className="flex mb-4">
+          <div className="flex flex-col lg:flex-row mb-4">
             <input
               type="email"
               placeholder="Enter your email address"
-              className="mr-2 ml-8 px-4 py-2 bg-white text-gray-500 text-base rounded-lg"
+              className="ml-8 px-4 py-2 bg-white text-gray-500 text-base rounded-lg mb-6 lg:mb-0"
               style={{ width: '300px', height: '40px' }}
             />
             <button
-              className="bg-red text-white font-bold px-4 py-2 text-base rounded-lg"
+              className="bg-red text-white font-bold px-4 py-2 text-base rounded-lg ml-8"
               style={{ width: '100px', height: '40px' }}
             >
               Subscribe
@@ -53,9 +53,9 @@ const Footer = () => {
         </div>
 
         {/* Second Column: Social Media Icons to Address */}
-        <div className="lg:w-1/2">
+        <div className="lg:w-1/2 p-4">
           {/* Social Media Icons */}
-          <div className="flex mb-8 mt-6 ml-8">
+          <div className="flex mb-8 mt-2 ml-4">
             <a href="https://www.youtube.com/@GDSC-MSCW" target="_blank" rel="noopener noreferrer">
               <img src={Youtube} alt="YouTube" className="mr-4" style={{ width: '30px', height: '30px' }} />
             </a>
@@ -79,14 +79,14 @@ const Footer = () => {
             {/* Phone Icon and Number */}
             <div className="flex items-center mb-4 ml-4">
               <img src={Phone} alt="Twitter" style={{ width: '30px', height: '30px' }} />
-              <p className="text-white hover:text-blue text-xl ml-4">+91 8810565359</p>
+              <p className="text-white hover:text-blue text-sm md:text-xl ml-4">+91 8810565359</p>
             </div>
 
             {/* Email Icon and Address */}
             <div className="flex items-center mb-4 ml-4">
              <img src={Email} alt="Email" style={{ width: '30px', height: '20px' }} />
              <a href="mailto:gdsc.mscw@du.ac.in">
-             <p className="text-white hover:text-blue text-xl ml-4">gdsc.mscw@du.ac.in</p>
+             <p className="text-white hover:text-blue text-sm md:text-xl ml-4">gdsc.mscw@du.ac.in</p>
              </a>
              </div>
 
@@ -98,7 +98,7 @@ const Footer = () => {
                  href="https://www.google.com/maps/place/Mata+Sundri+College+for+Women(University+Of+Delhi)/@28.6335639,77.2315474,17z/data=!3m1!4b1!4m6!3m5!1s0x390cfd2ed90f27c3:0x1ae96f860fc49d6e!8m2!3d28.6335639!4d77.2341223!16s%2Fm%2F0cpdwg1?hl=en&entry=ttu"
                  target="_blank"
                  rel="noopener noreferrer"
-                 className="text-white hover:text-blue text-xl ml-4"
+                 className="text-white hover:text-blue text-sm md:text-xl ml-4"
                >
                Mata Sundari Ln, Mata Sundri Women's College, Mandi House, New Delhi, Delhi 110002
                </a>
@@ -106,11 +106,9 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      {/* Copyright Line */}
-      <div className="text-center font-bold mt-4 absolute bottom-0 left-0 right-0">
-        <p className="text-white text-sm bg-gray-400 p-2">
-          Copyright © 2023. All Rights Reserved
-        </p>
+      {/* Copyright Information */}
+      <div className="text-center text-white font-semibold text-sm bg-gray-400 p-2 mt-4 w-full">
+        &copy; {new Date().getFullYear()} All right reserved GDSC MSCW
       </div>
     </footer>
   );
