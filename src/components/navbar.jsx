@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../assets/gdsc logo.ico';
+import logo from '/gdsc logo.ico';
 import sun from "../assets/sun.svg";
 import moon from "../assets/moon.svg";
 
