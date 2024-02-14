@@ -3,6 +3,8 @@ import React from 'react';
 import heroImage from '../assets/heroimg.gif';
 import Events from '../assets/events.png';
 import Buttons from '../components/Buttons';
+import Img from '../assets/img.png';
+import Linesbg from '../assets/Group 207.svg';
 
 const Home = () => {
   return (
@@ -47,9 +49,22 @@ const Home = () => {
           <img
             src={heroImage}
             alt="Hero Image"
-            className="w-auto h-auto mt-6"
+            className="w-[90%] h-[80%] mt-6"
           />
         </div>
+      </div>
+      
+      {/*Image section */}
+      <div className="container mx-auto my-10 w-[30%] text-center">
+        <img src={Img} alt="myImg" />
+      </div>
+      
+      {/* SVG background and cards section */}
+      <div className="container mx-auto my-10 relative text-center">
+        <img
+        src={Linesbg}
+        alt="Background Lines"
+        />
       </div>
 
       {/* Our events section */}
