@@ -41,7 +41,7 @@ const Footer = () => {
               type="email"
               placeholder="Enter your email address"
               className="ml-8 px-4 py-2 bg-white text-gray-500 text-base rounded-lg mb-6 lg:mb-0"
-              style={{ width: '300px', height: '40px' }}
+              style={{ maxWidth: '300px', height: '40px' }}
             />
             <button
               className="bg-red text-white font-bold px-4 py-2 text-base rounded-lg ml-8"
