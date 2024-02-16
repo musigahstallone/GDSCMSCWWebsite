@@ -5,12 +5,14 @@ import Events from '../assets/events.png';
 import Buttons from '../components/Buttons';
 import Img from '../assets/img.png';
 import Linesbg from '../assets/Group 207.svg';
+import studyJams from '../assets/studyJams.gif';
+import Team from '../assets/team.gif';
 
 const Home = () => {
   return (
-    <div>
+    <div className="mx-0">
       {/* Hero section */}
-      <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-40">
         <div className="mb-4 sm:mb-0 ml-10 md:ml-8 mr-10 md:mr-4">
           <h1 className="text-2xl md:text-3xl text-gray-800 font-bold mt-10 md:mt-20">
             Welcome to <span className="text-red">G</span>
@@ -60,28 +62,29 @@ const Home = () => {
       </div>
       
       {/* SVG background and cards section */}
-      <div className="container mx-auto my-10 relative text-center">
+      <div className="my-10 mt-40 text-center">
         <img
         src={Linesbg}
         alt="Background Lines"
+        className="w-full"
         />
       </div>
 
       {/* Our events section */}
-      <h2 className="text-2xl md:text-3xl font-bold mb-10 inline-block text-black ml-[40%] lg:ml-[70%] mt-20">
-       Our  <span class="bg-gradient-to-b from-red to-yellow text-transparent bg-clip-text">Events</span>
-      </h2>
-      <div className="container grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <div className="container grid grid-cols-1 lg:grid-cols-2 gap-0 mx-auto md:gap-8 mt-40">
         <div className="sm:col-span-1">
           <img
             src={Events} 
             alt="Our Events"
-            className="w-[80%] md:w-[90%] lg:w-full mb-10 mx-10"
+            className="w-[80%] md:w-[90%] lg:w-full mx-10"
           />
         </div>
         <div className="sm:col-span-1">
-          <div className="mb-4 mx-10 text-center mt-10">          
-            <p className="text-gray-68 text-start font-semibold mb-10">
+          <div className="mb-4 text-center mt-8"> 
+          <h2 className="text-2xl md:text-3xl font-bold mb-10 inline-block text-black mx-auto">
+           Our  <span class="bg-gradient-to-b from-red to-yellow text-transparent bg-clip-text">Events</span>
+          </h2>         
+            <p className="text-gray-68 ml-10 md:ml-20 mr-10 text-start font-semibold mb-10">
             Explore upcoming events at GDSC MSCW to delve into the fascinating world of technology. Immerse yourself in a community-driven environment that encourages learning, collaboration, and innovation. Stay updated with the latest trends and groundbreaking innovations through our exciting lineup of events.
             </p>
             <Buttons
@@ -91,6 +94,57 @@ const Home = () => {
           </div>
         </div>
       </div>
+
+       {/* Study jams section */}
+      <div className="container grid grid-cols-1 lg:grid-cols-2 gap-0 mx-auto md:gap-10 mb-8 mt-10">
+        <div className="sm:col-span-1">
+          <div className="mb-4 text-center">
+          <h2 className="text-2xl md:text-3xl font-bold mb-10 inline-block text-black mx-auto mt-14 md:mt-40">
+           Study <span class="bg-gradient-to-b from-red to-yellow text-transparent bg-clip-text">Jams</span>
+          </h2>          
+            <p className="text-gray-68 ml-10 md:ml-20 mr-10 text-start font-semibold mb-10">
+            Join our vibrant GDSC Study Jams, where learning meets collaboration! Dive into hands-on projects, guided sessions, and interactive workshops exploring cutting-edge Google technologies. Expand your skills, connect with passionate learners, and boost your tech journey with us. 
+            </p>
+            <Buttons
+              text="Know more"
+              link="/events"
+            />
+          </div>
+        </div>
+        <div className="sm:col-span-1 hidden md:block">
+          <img
+            src={studyJams} 
+            alt="Study Jams"
+            className="w-[80%] md:w-[90%] lg:w-full mx-10"
+          />
+        </div>
+      </div>
+
+    {/* Meet the Team section */}
+    <div className="container grid grid-cols-1 lg:grid-cols-2 gap-0 mx-auto md:gap-10 mb-8">
+    <div className="sm:col-span-1 hidden md:block">
+          <img
+            src={Team} 
+            alt="meet the team"
+            className="w-[80%] md:w-[90%] lg:w-full"
+          />
+        </div>
+        <div className="sm:col-span-1">
+          <div className="mb-4 text-center">
+          <h2 className="text-2xl md:text-3xl font-bold mb-10 inline-block text-black mx-auto mt-14 md:mt-40">
+           Meet the <span class="bg-gradient-to-b from-red to-yellow text-transparent bg-clip-text">Team</span>
+          </h2>          
+            <p className="text-gray-68 ml-10 md:ml-20 mr-10 text-start font-semibold mb-10">
+            Dive into the essence of Our Team. A diverse blend of talents and passion, we unite to drive innovation. Meet the individuals sculpting our vision, each contributing a distinctive hue to our collective masterpiece.
+            </p>
+            <Buttons
+              text="Know more"
+              link="/team"
+            />
+          </div>
+        </div>
+      </div>
+     
     </div>
   );
 };

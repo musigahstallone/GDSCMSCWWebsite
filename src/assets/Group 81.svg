@@ -1,0 +1,15 @@
+<svg width="922" height="35" viewBox="0 0 922 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+<line x1="9.26562" y1="14.5" x2="921.999" y2="14.5" stroke="url(#paint0_linear_1_742)" stroke-width="6"/>
+<ellipse cx="13.4402" cy="17.5" rx="13.4402" ry="17.5" fill="url(#paint1_linear_1_742)"/>
+<ellipse cx="13.441" cy="17.4993" rx="4.48008" ry="5.83333" fill="white"/>
+<defs>
+<linearGradient id="paint0_linear_1_742" x1="-11.0173" y1="18" x2="938.902" y2="18.0051" gradientUnits="userSpaceOnUse">
+<stop stop-color="#EA4335"/>
+<stop offset="1" stop-color="#FBBC05"/>
+</linearGradient>
+<linearGradient id="paint1_linear_1_742" x1="13.4402" y1="0" x2="13.4402" y2="35" gradientUnits="userSpaceOnUse">
+<stop stop-color="#EA4335"/>
+<stop offset="1" stop-color="#FBBC05"/>
+</linearGradient>
+</defs>
+</svg>
